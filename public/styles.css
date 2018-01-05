@@ -27,7 +27,7 @@ header li {
   background-color: #bbbbbb;
   text-align: center;
   padding: 6px 0;
-  border-top: 1px solid white;
+  border-top: 2px solid white;
 }
 
 header a {
@@ -47,6 +47,9 @@ main {
   background-color: #f47142;
   padding: 8px;
   font-size: 18px;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+
 }
 
 .contacts_summary strong {

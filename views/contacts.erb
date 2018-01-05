@@ -1,8 +1,8 @@
 <div class="contacts_summary">There are <strong><%= @all_contacts.count -%></strong> contacts</div>
-  <% @all_contacts.each do |contact| %>
-    <div class="contact">
-      <h2><%= contact.full_name -%> (<%= contact.email -%>)</h2>
-      <p> <a href="#">Edit</a> | <a href="#">Delete</a> </p>
-    </div>
-  <% end %>
+<% @all_contacts.each do |contact| %>
+  <div class="contact">
+    <h2><%= contact.full_name -%> (<%= contact.email -%>)</h2>
+    <p> <a href="#">Edit</a> | <a href="#">Delete</a> </p>
+  </div>
+<% end %>
 </table>
