@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Contacts</title>
-  </head>
-  <body>
-    <h1>All contacts:</h1>
-    <table>
-    <tr>
-      <th>Name</th><th>Email</th><th>Notes</th>
-    </tr>
-      <% @all_contacts.each do |contact| %>
-        <tr><td><%= contact.full_name -%></td><td><%= contact.email -%></td><td><%= contact.note -%></td></tr>
-      <% end %>
-    </table>
-    <h4><a href="/">Back to Home Page</a></h4>
-  </body>
-</html>
+<div class="contacts_summary">There are <strong><%= @all_contacts.count -%></strong> contacts</div>
+  <% @all_contacts.each do |contact| %>
+    <div class="contact">
+      <h2><%= contact.full_name -%> (<%= contact.email -%>)</h2>
+      <p> <a href="#">Edit</a> | <a href="#">Delete</a> </p>
+    </div>
+  <% end %>
+</table>
