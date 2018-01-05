@@ -35,3 +35,14 @@ header a {
   color: white;
   font-size: 22px;
 }
+
+footer {
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  background-color: black;
+  color: white;
+  padding: 12px 0;
+}
