@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="/public/styles.css">
   </head>
   <body>
-    <%= yield %>
+    <header>
+      <h1>Bitmaker CRM</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Add a contact</a></li>
+        <li><a href="/about_me">About</a></li>
+        <li><a href="/contacts">View all contacts</a></li>
+      </ul>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer><p>&#169; Bitmaker 2018</p></footer>
   </body>
 </html>
