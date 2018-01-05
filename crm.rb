@@ -10,6 +10,10 @@ get '/contacts' do
   erb(:contacts)
 end
 
+get '/about_me' do
+  erb(:about_me)
+end
+
 after do
   ActiveRecord::Base.connection.close
 end
