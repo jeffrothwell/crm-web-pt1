@@ -18,14 +18,18 @@ get '/contacts/new' do
   erb(:new)
 end
 
-get '/contacts/:id' do
-  @contact = Contact.find(params[:id])
-  if @contact
-    erb(:show_contact)
-  else
-    raise Sinatra::NotFound
+  post '/contacts' do
+    "Hello World"
+    redirect to('/contacts')
   end
 
+  get '/contacts/:id' do
+    @contact = Contact.find(params[:id])
+    if @contact
+      erb(:show_contact)
+    else
+      raise Sinatra::NotFound
+    end
 
 end
 
