@@ -14,6 +14,10 @@ get '/about_me' do
   erb(:about_me)
 end
 
+get '/contacts/new' do
+  erb(:new)
+end
+
 get '/contacts/:id' do
   @contact = Contact.find(params[:id])
   if @contact
@@ -21,6 +25,8 @@ get '/contacts/:id' do
   else
     raise Sinatra::NotFound
   end
+
+
 end
 
 after do
