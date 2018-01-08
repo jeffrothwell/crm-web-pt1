@@ -6,7 +6,7 @@ get '/' do
 end
 
 get '/contacts' do
-  @all_contacts = Contact.all
+  @all_contacts = Contact.all.order("last_name")
   erb(:contacts)
 end
 
