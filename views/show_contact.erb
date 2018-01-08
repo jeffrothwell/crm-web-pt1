@@ -2,4 +2,5 @@
   <p>Name: <%= @contact.full_name %></p>
   <p>Email: <%= @contact.email %></p>
   <p>notes: <%= @contact.note %></p>
+  <p> <a href="/contacts/<%= @contact.id %>/edit">Edit</a> | <a href="/contacts/<%= @contact.id %>/delete">Delete</a></p>
 </div>
