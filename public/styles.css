@@ -8,12 +8,21 @@ body {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 header h1 {
-  background-color: #222222;
   color: white;
+  background-color: #222222;
   text-align: center;
   padding: 12px 0;
   margin: 0;
+  font-size: 32px
+}
+
+header h1 a {
+  color: white;
 }
 
 header ul {
@@ -30,8 +39,7 @@ header li {
   border-top: 2px solid white;
 }
 
-header a {
-  text-decoration: none;
+header li a {
   color: white;
   font-size: 22px;
 }
