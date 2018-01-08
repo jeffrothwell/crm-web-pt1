@@ -1,0 +1,26 @@
+<h1>Add a new contact</h1>
+
+<form action='/contacts/<%= @contact.id %>' method='post'>
+  <input type='hidden' name='_method' value='put'>
+  <div>
+    <label for="first_name">First Name:</label>
+    <input type='text' name='first_name' id="first_name" value='<%= @contact.first_name %>'>
+  </div>
+
+  <div>
+    <label for="last_name">Last Name:</label>
+    <input type='text' name='last_name' id="last_name" value='<%= @contact.last_name %>'>
+  </div>
+
+  <div>
+    <label for="email">email:</label>
+    <input type='text' name='email' id="email" value='<%= @contact.email %>'>
+  </div>
+
+  <div>
+    <label for="note">Notes:</label>
+    <textarea type='text' name='note' id="note" value='<%= @contact.note %>'></textarea>
+  </div>
+
+  <input type='submit' value='Update Contact'>
+</form>
