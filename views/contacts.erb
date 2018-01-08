@@ -2,7 +2,7 @@
 <% @all_contacts.each do |contact| %>
   <div class="contact">
     <h2><%= contact.full_name -%> (<%= contact.email -%>)</h2>
-    <p> <a href="#">Edit</a> | <a href="#">Delete</a> | <a href="/contacts/<%= contact.id %>">Show details</a> </p>
+    <p> <a href="/contacts/<%= contact.id %>/edit">Edit</a> | <a href="/contacts/<%= contact.id %>/delete">Delete</a> | <a href="/contacts/<%= contact.id %>">Show details</a> </p>
   </div>
 <% end %>
 </table>
