@@ -35,23 +35,14 @@ end
 get '/contacts/search-by' do
   # "GET request: #{params}"
   if params[:attribute] == "name"
-    @contact = Contact.find_by(first_name: params[:query])
-    if @contact
-      erb :show_contact
-    end
-    @contact = Contact.find_by(last_name: params[:query])
-    if @contact
-      erb :show_contact
-    else
-      "No such contact"
-    end
+    @contact = Contact.find_by(first_name: params[:query]) || Contact.find_by(last_name: params[:query])
   elsif params[:attribute] == "email"
     @contact = Contact.find_by(email: params[:query])
-    if @contact
-      erb :show_contact
-    else
-      "No such contact"
-    end
+  end
+  if @contact
+    erb :show_contact
+  else
+    "No such contact"
   end
 end
 
