@@ -28,6 +28,33 @@ post '/contacts' do
   redirect to('/contacts')
 end
 
+get '/contacts/search' do
+  erb :search
+end
+
+get '/contacts/search-by' do
+  # "GET request: #{params}"
+  if params[:attribute] == "name"
+    @contact = Contact.find_by(first_name: params[:query])
+    if @contact
+      erb :show_contact
+    end
+    @contact = Contact.find_by(last_name: params[:query])
+    if @contact
+      erb :show_contact
+    else
+      "No such contact"
+    end
+  elsif params[:attribute] == "email"
+    @contact = Contact.find_by(email: params[:query])
+    if @contact
+      erb :show_contact
+    else
+      "No such contact"
+    end
+  end
+end
+
 get '/contacts/:id' do
   @contact = Contact.find(params[:id])
   if @contact
@@ -38,7 +65,7 @@ get '/contacts/:id' do
 end
 
 get '/contacts/:id/edit' do
-  @contact = Contact.find_by(id: params[:id].to_i)
+  @contact = Contact.find(params[:id].to_i)
   if @contact
     erb :edit
   else
