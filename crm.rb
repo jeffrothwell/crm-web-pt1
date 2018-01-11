@@ -39,7 +39,7 @@ get '/contacts/search-by' do
   @contacts << Contact.where("email like '%#{params[:query]}%'")
   @contacts.flatten!.uniq!
   if @contacts.any?
-    erb :show_contact
+    erb(:search_results)
   else
     "No such contact"
   end

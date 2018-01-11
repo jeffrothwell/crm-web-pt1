@@ -1,0 +1,8 @@
+<div class="contact">
+  <% @contacts.each do |contact| %>
+    <p>Name: <%= contact.full_name %></p>
+    <p>Email: <%= contact.email %></p>
+    <p>notes: <%= contact.note %></p>
+    <hr>
+  <% end %>
+</div>
